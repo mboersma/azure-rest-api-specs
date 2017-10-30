@@ -145,7 +145,7 @@
         "properties": {
           "$ref": "#/definitions/OrchestratorVersionProfileProperties",
           "description": "The properties of an orchestrator version profile.",
-          "x-ms-client-flatten": false
+          "x-ms-client-flatten": true
         }
       },
       "required": [

@@ -779,7 +779,7 @@
             "properties": {
               "description": "Properties of a managed cluster.",
               "$ref": "#/definitions/ManagedClusterProperties",
-              "x-ms-client-flatten": false
+              "x-ms-client-flatten": true
             }
           }
         }
@@ -941,7 +941,7 @@
         "properties": {
           "$ref": "#/definitions/ManagedClusterUpgradeProfileProperties",
           "description": "Properties of upgrade profile.",
-          "x-ms-client-flatten": false
+          "x-ms-client-flatten": true
         }
       },
       "required": [

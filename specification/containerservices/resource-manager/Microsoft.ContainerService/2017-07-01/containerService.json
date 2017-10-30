@@ -939,7 +939,7 @@
         "properties": {
           "$ref": "#/definitions/UpgradeProfileProperties",
           "description": "Properties of upgrade profile.",
-          "x-ms-client-flatten": false
+          "x-ms-client-flatten": true
         }
       },
       "required": [
