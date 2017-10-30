@@ -181,9 +181,9 @@ These settings apply only when `--python` is specified on the command line.
 
 ``` yaml $(python)
 python:
-  # override the default output folder
-  output-folder: $(output-folder)/python
+  azure-arm: true
   license-header: MICROSOFT_MIT_NO_VERSION
+  namespace: azure.mgmt.containerservice
   payload-flattening-threshold: 2
 ```
 
