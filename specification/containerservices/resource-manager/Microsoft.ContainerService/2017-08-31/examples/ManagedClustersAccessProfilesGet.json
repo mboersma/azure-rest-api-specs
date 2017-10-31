@@ -15,7 +15,7 @@
         "AccessProfile": {
           "kubeConfig": "kubeConfig1"
         },
-        "type": "Microsoft.ContainerService/ManagedClusters"
+        "type": "Microsoft.ContainerService/ManagedClusters/AccessProfiles"
       }
     }
   }
