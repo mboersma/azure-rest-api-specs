@@ -1266,6 +1266,9 @@
           "Create Managed Cluster with PPG": {
             "$ref": "./examples/ManagedClustersCreate_PPG.json"
           },
+          "Create Managed Cluster with Pod Snapshot Restore enabled": {
+            "$ref": "./examples/ManagedClustersCreate_EnablePodSnapshotRestore.json"
+          },
           "Create Managed Cluster with PodIdentity enabled": {
             "$ref": "./examples/ManagedClustersCreate_PodIdentity.json"
           },
@@ -12979,6 +12982,16 @@
       },
       "readOnly": true
     },
+    "ManagedClusterPodSnapshotProfile": {
+      "type": "object",
+      "description": "Settings for the AKS-managed Pod Snapshot Restore core extension.",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "description": "Whether to enable Pod Snapshot Restore for the cluster."
+        }
+      }
+    },
     "ManagedClusterPoolUpgradeProfile": {
       "type": "object",
       "description": "The list of available upgrade versions.",
@@ -13277,6 +13290,10 @@
         "aiToolchainOperatorProfile": {
           "$ref": "#/definitions/ManagedClusterAIToolchainOperatorProfile",
           "description": "AI toolchain operator settings that apply to the whole cluster."
+        },
+        "podSnapshotProfile": {
+          "$ref": "#/definitions/ManagedClusterPodSnapshotProfile",
+          "description": "Pod snapshot and restore settings that apply to the whole cluster."
         },
         "schedulerProfile": {
           "$ref": "#/definitions/SchedulerProfile",

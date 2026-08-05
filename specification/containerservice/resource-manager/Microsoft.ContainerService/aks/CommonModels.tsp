@@ -2064,6 +2064,12 @@ model ManagedClusterProperties {
   aiToolchainOperatorProfile?: ManagedClusterAIToolchainOperatorProfile;
 
   /**
+   * Pod snapshot and restore settings that apply to the whole cluster.
+   */
+  @added(Versions.v2026_07_02_preview)
+  podSnapshotProfile?: ManagedClusterPodSnapshotProfile;
+
+  /**
    * Profile with scheduler-related settings, like the configuration mode for each scheduler managed by AKS. See https://aka.ms/aks/scheduler-profile.
    */
   @added(Versions.v2026_05_01)
@@ -4184,6 +4190,17 @@ model ManagedClusterBootstrapProfile {
 model ManagedClusterAIToolchainOperatorProfile {
   /**
    * Whether to enable AI toolchain operator to the cluster. Indicates if AI toolchain operator  enabled or not.
+   */
+  enabled?: boolean;
+}
+
+/**
+ * Settings for the AKS-managed Pod Snapshot Restore core extension.
+ */
+@added(Versions.v2026_07_02_preview)
+model ManagedClusterPodSnapshotProfile {
+  /**
+   * Whether to enable Pod Snapshot Restore for the cluster.
    */
   enabled?: boolean;
 }
